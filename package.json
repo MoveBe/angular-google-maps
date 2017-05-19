@@ -16,7 +16,9 @@
     "ng2",
     "angular2"
   ],
+  "main": "dist/core/index.js",
   "scripts": {
+    "prepublish": "npm run build",
     "clean": "rimraf dist && rimraf .tmp && mkdir dist && mkdir .tmp && rimraf 'src/**/*.ngfactory.ts'",
     "prebuild": "npm run clean",
     "build": "npm run lint && npm run scripts && npm run packagejson && npm run copyassets",
